@@ -8,9 +8,8 @@
     <link href="/assets/application-77aedbda1f36fe09d63c69b87496b7fc.css" media="screen" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic|PT+Sans+Caption:400,700|Economica:400,700|PT+Sans+Caption+Bold|PT+Sans+Narrow" media="screen" rel="stylesheet" />
     <script type="text/javascript"></script>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="/assets/application-3005c307bfc06e9ec84e97784764091c.js"></script>
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.6.2/chosen.jquery.js"></script>-->
     <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
     <meta contentAlt="authenticity_token" name="csrf-param" />
     <meta contentAlt="EJcWYazK77a690nPcXVrGdulLeK3jF+OVKcggmOvgD8=" name="csrf-token" />
@@ -467,54 +466,6 @@
                 border-top: 2px solid #eee;
             }
     </style>
-    <script>
-        function ChangeAcive(index) {
-            $(".accordion-heading.active").removeClass('active');
-            if (index == 0) {
-                $("#SuperAdminTab").addClass('active');
-            }
-            if (index == 1) {
-                $("#GeneralTab").addClass('active');
-            }
-            else if (index == 2) {
-                $("#UserTab").addClass('active');
-            }
-            else if (index == 3) {
-                $("#PlanningTab").addClass('active');
-            }
-            else if (index == 4 || index == 5 || index == 6 || index == 7) {
-                if (index == 5) {
-                    $scope.financialAttrType = 3;
-                }
-                else if (index == 6) {
-                    $scope.financialAttrType = 1;
-                }
-                else if (index == 7) {
-                    $scope.financialAttrType = 2;
-                }
-                $("#FinancialTab").addClass('active');
-            }
-            else if (index == 8) {
-                $("#DashBoardTab").addClass('active');
-            }
-            else if (index == 9) {
-                $("#ObjectiveTab").addClass('active');
-            }
-            else if (index == 10) {
-                $("#TaskTab").addClass('active');
-            }
-            else if (index == 11) {
-                $("#ReportTabe").addClass('active');
-            }
-            else if (index == 12) {
-                $("#DamTab").addClass('active');
-            }
-        }
-
-        $(window).load(function () {
-            $(".chzn-select").chosen();
-        });
-    </script>
     <div class="hide" id="modal"></div>
     <div id="root">
         <div id="header">
@@ -600,7 +551,7 @@
                         <div class="accordion-inner">
                             <ul class="nav nav-list nav-list-bold" id="Ul9">
                                 <li ui-sref-active="active">
-                                    <a ui-sref="mui.admin.superadmin" onclick="ChangeAcive(0)">
+                                    <a ui-sref="mui.admin.superadmin" ng-click="ChangeAcive(0)">
                                         <i class="icon-double-angle-right"></i>
                                         <span style="color: #4d6610;">Configuration</span>
                                     </a>
@@ -620,99 +571,99 @@
                         <div class="accordion-inner">
                             <ul class="nav nav-list nav-list-bold" id="treeHolders">
                                 <li id="2" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.titlelogo" onclick="ChangeAcive(1)">
+                                    <a ui-sref="mui.admin.titlelogo" ng-click="ChangeAcive(1)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Title</span>
                                     </a>
                                 </li>
                                 <li id="3" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.navigation" onclick="ChangeAcive(1)">
+                                    <a ui-sref="mui.admin.navigation" ng-click="ChangeAcive(1)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Navigation</span>
                                     </a>
                                 </li>
                                 <li id="4" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.additionalsettings" onclick="ChangeAcive(1)">
+                                    <a ui-sref="mui.admin.additionalsettings" ng-click="ChangeAcive(1)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Additional Settings</span>
                                     </a>
                                 </li>
                                 <li id="5" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.languagesettings" onclick="ChangeAcive(1)">
+                                    <a ui-sref="mui.admin.languagesettings" ng-click="ChangeAcive(1)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Language Settings</span>
                                     </a>
                                 </li>
                                 <li id="7" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.notificationfiltersettings" onclick="ChangeAcive(1)">
+                                    <a ui-sref="mui.admin.notificationfiltersettings" ng-click="ChangeAcive(1)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Notification</span>
                                     </a>
                                 </li>
                                 <li id="6" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.newsfeedfiltersettings" onclick="ChangeAcive(1)">
+                                    <a ui-sref="mui.admin.newsfeedfiltersettings" ng-click="ChangeAcive(1)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>NewsFeed Settings</span>
                                     </a>
                                 </li>
                                 <li id="8" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.searchengine" onclick="ChangeAcive(1)">
+                                    <a ui-sref="mui.admin.searchengine" ng-click="ChangeAcive(1)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Search Engine</span>
                                     </a>
                                 </li>
                                 <li id="9" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.ganttviewheaderbar" onclick="ChangeAcive(1)">
+                                    <a ui-sref="mui.admin.ganttviewheaderbar" ng-click="ChangeAcive(1)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Gantt View Header</span>
                                     </a>
                                 </li>
                                 <li id="10" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.statistics" onclick="ChangeAcive(1)">
+                                    <a ui-sref="mui.admin.statistics" ng-click="ChangeAcive(1)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Statistics</span>
                                     </a>
                                 </li>
                                 <li id="11" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.broadcastmsg" onclick="ChangeAcive(1)">
+                                    <a ui-sref="mui.admin.broadcastmsg" ng-click="ChangeAcive(1)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Broadcast</span>
                                     </a>
                                 </li>
                                 <li id="12" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.tabs" onclick="ChangeAcive(1)">
+                                    <a ui-sref="mui.admin.tabs" ng-click="ChangeAcive(1)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Tabs</span>
                                     </a>
                                 </li>
 
                                 <li id="14" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.updates" onclick="ChangeAcive(1)">
+                                    <a ui-sref="mui.admin.updates" ng-click="ChangeAcive(1)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Updates</span>
                                     </a>
                                 </li>
                                 <li id="13" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.passwordpolicy" onclick="ChangeAcive(1)">
+                                    <a ui-sref="mui.admin.passwordpolicy" ng-click="ChangeAcive(1)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Password</span>
                                     </a>
                                 </li>
 
                                 <li id="15" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.searchcriteria" onclick="ChangeAcive(1)">
+                                    <a ui-sref="mui.admin.searchcriteria" ng-click="ChangeAcive(1)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Search Settings</span>
                                     </a>
                                 </li>
                                 <li id="100" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.businessdays" onclick="ChangeAcive(1)">
+                                    <a ui-sref="mui.admin.businessdays" ng-click="ChangeAcive(1)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Business Days</span>
                                     </a>
                                 </li>
                                 <li id="16" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.cloudsettings" onclick="ChangeAcive(1)">
+                                    <a ui-sref="mui.admin.cloudsettings" ng-click="ChangeAcive(1)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Cloud setup</span>
                                     </a>
@@ -732,61 +683,61 @@
                         <div class="accordion-inner">
                             <ul class="nav nav-list nav-list-bold" id="Ul1">
                                 <li id="17" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.user" onclick="ChangeAcive(2)">
+                                    <a ui-sref="mui.admin.user" ng-click="ChangeAcive(2)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Users</span>
                                     </a>
                                 </li>
                                 <li id="18" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.apiusers" onclick="ChangeAcive(2)">
+                                    <a ui-sref="mui.admin.apiusers" ng-click="ChangeAcive(2)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>API Users</span>
                                     </a>
                                 </li>
                                 <li id="76" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.accountlock" onclick="ChangeAcive(2)">
+                                    <a ui-sref="mui.admin.accountlock" ng-click="ChangeAcive(2)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Account Lock</span>
                                     </a>
                                 </li>
                                 <li id="19" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.role" onclick="ChangeAcive(2)">
+                                    <a ui-sref="mui.admin.role" ng-click="ChangeAcive(2)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>role</span>
                                     </a>
                                 </li>
                                 <li id="20" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.pendinguser" onclick="ChangeAcive(2)">
+                                    <a ui-sref="mui.admin.pendinguser" ng-click="ChangeAcive(2)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Pending User</span>
                                     </a>
                                 </li>
                                 <li id="21" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.module" onclick="ChangeAcive(2)">
+                                    <a ui-sref="mui.admin.module" ng-click="ChangeAcive(2)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Module</span>
                                     </a>
                                 </li>
                                 <li id="22" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.SSO" onclick="ChangeAcive(2)">
+                                    <a ui-sref="mui.admin.SSO" ng-click="ChangeAcive(2)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>SSO</span>
                                     </a>
                                 </li>
                                 <li id="23" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.assetaccess" onclick="ChangeAcive(2)">
+                                    <a ui-sref="mui.admin.assetaccess" ng-click="ChangeAcive(2)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Asset Access</span>
                                     </a>
                                 </li>
                                 <li id="80" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.approvalrole" onclick="ChangeAcive(2)">
+                                    <a ui-sref="mui.admin.approvalrole" ng-click="ChangeAcive(2)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Approve Role</span>
                                     </a>
                                 </li>
                                 <li id="82" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.dalimuser" onclick="ChangeAcive(2)">
+                                    <a ui-sref="mui.admin.dalimuser" ng-click="ChangeAcive(2)">
                                         <i class="icon-double-angle-right"></i>
                                         DALIM User
                                     </a>
@@ -806,55 +757,55 @@
                         <div class="accordion-inner">
                             <ul class="nav nav-list nav-list-bold" id="Ul2">
                                 <li id="25" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.listsettings" onclick="ChangeAcive(3)">
+                                    <a ui-sref="mui.admin.listsettings" ng-click="ChangeAcive(3)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>List Settings</span>
                                     </a>
                                 </li>
                                 <li id="26" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.treesettings" onclick="ChangeAcive(3)">
+                                    <a ui-sref="mui.admin.treesettings" ng-click="ChangeAcive(3)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Tree Settings</span>
                                     </a>
                                 </li>
                                 <li id="27" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.ganttviewsettings" onclick="ChangeAcive(3)">
+                                    <a ui-sref="mui.admin.ganttviewsettings" ng-click="ChangeAcive(3)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Gant View Settings</span>
                                     </a>
                                 </li>
                                 <li id="28" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.listviewsettings" onclick="ChangeAcive(3)">
+                                    <a ui-sref="mui.admin.listviewsettings" ng-click="ChangeAcive(3)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>List View Settings</span>
                                     </a>
                                 </li>
                                 <li id="29" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.rootlevelfiltersettings" onclick="ChangeAcive(3)">
+                                    <a ui-sref="mui.admin.rootlevelfiltersettings" ng-click="ChangeAcive(3)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Root Level Settings</span>
                                     </a>
                                 </li>
                                 <li id="30" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.detailfiltersettings" onclick="ChangeAcive(3)">
+                                    <a ui-sref="mui.admin.detailfiltersettings" ng-click="ChangeAcive(3)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Detail Filter</span>
                                     </a>
                                 </li>
                                 <li id="31" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.myworkspacesettings" onclick="ChangeAcive(3)">
+                                    <a ui-sref="mui.admin.myworkspacesettings" ng-click="ChangeAcive(3)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>My Works Space</span>
                                     </a>
                                 </li>
                                 <li id="32" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.plantabsettings" onclick="ChangeAcive(3)">
+                                    <a ui-sref="mui.admin.plantabsettings" ng-click="ChangeAcive(3)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Plan</span>
                                     </a>
                                 </li>
                                 <li id="33" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.designlayout" onclick="ChangeAcive(3)">
+                                    <a ui-sref="mui.admin.designlayout" ng-click="ChangeAcive(3)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Design</span>
                                     </a>
@@ -874,45 +825,45 @@
                         <div class="accordion-inner">
                             <ul class="nav nav-list nav-list-bold" id="Ul3">
                                 <li id="35" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.financialforecastsettings" onclick="ChangeAcive(4)">
+                                    <a ui-sref="mui.admin.financialforecastsettings" ng-click="ChangeAcive(4)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>ForeCast</span>
                                     </a>
                                 </li>
                                 <li id="37" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.financialforecast" onclick="ChangeAcive(4)">
+                                    <a ui-sref="mui.admin.financialforecast" ng-click="ChangeAcive(4)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Financial Forecast</span>
                                     </a>
                                 </li>
                                 <li id="38" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.POSettings" onclick="ChangeAcive(4)">
+                                    <a ui-sref="mui.admin.POSettings" ng-click="ChangeAcive(4)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>POS</span>
                                     </a>
                                 </li>
 
                                 <li id="36" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.Currencyconvertersettings" onclick="ChangeAcive(4)">
+                                    <a ui-sref="mui.admin.Currencyconvertersettings" ng-click="ChangeAcive(4)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Currency Convertor</span>
                                     </a>
                                 </li>
 
                                 <li id="39" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.financialmetadata" onclick="ChangeAcive(5)">
+                                    <a ui-sref="mui.admin.financialmetadata" ng-click="ChangeAcive(5)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Financial Metadata</span>
                                     </a>
                                 </li>
                                 <li id="40" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.pometadata" onclick="ChangeAcive(6)">
+                                    <a ui-sref="mui.admin.pometadata" ng-click="ChangeAcive(6)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>POMetadata</span>
                                     </a>
                                 </li>
                                 <li id="41" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.spenttransaction" onclick="ChangeAcive(7)">
+                                    <a ui-sref="mui.admin.spenttransaction" ng-click="ChangeAcive(7)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Spent</span>
                                     </a>
@@ -933,68 +884,68 @@
                         <div class="accordion-inner">
                             <ul class="nav nav-list nav-list-bold" id="Ul8">
                                 <li id="43" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.assetcreation" onclick="ChangeAcive(12)">
+                                    <a ui-sref="mui.admin.assetcreation" ng-click="ChangeAcive(12)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Asset Creation</span>
                                     </a>
                                 </li>
                                 <li ng-show="false" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.Summaryviewsettings" onclick="ChangeAcive(12)">
+                                    <a ui-sref="mui.admin.Summaryviewsettings" ng-click="ChangeAcive(12)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Summary View</span>
                                     </a>
                                 </li>
                                 <li ng-show="false" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.Listviewsettings" onclick="ChangeAcive(12)">
+                                    <a ui-sref="mui.admin.Listviewsettings" ng-click="ChangeAcive(12)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>List View</span>
                                     </a>
                                 </li>
                                 <li ng-show="false" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.Thumbnailviewsettings" onclick="ChangeAcive(12)">
+                                    <a ui-sref="mui.admin.Thumbnailviewsettings" ng-click="ChangeAcive(12)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Thumbnail View</span>
                                     </a>
                                 </li>
                                 <li id="44" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.damviewsettings" onclick="ChangeAcive(12)">
+                                    <a ui-sref="mui.admin.damviewsettings" ng-click="ChangeAcive(12)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>DAM View</span>
                                     </a>
                                 </li>
 
                                 <li id="45" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.ReformatProfilesettings" onclick="ChangeAcive(12)">
+                                    <a ui-sref="mui.admin.ReformatProfilesettings" ng-click="ChangeAcive(12)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Reformation</span>
                                     </a>
                                 </li>
                                 <li id="46" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.optimaker" onclick="ChangeAcive(12)">
+                                    <a ui-sref="mui.admin.optimaker" ng-click="ChangeAcive(12)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Optimaker</span>
                                     </a>
                                 </li>
                                 <li id="47" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.assetcategory" onclick="ChangeAcive(12)">
+                                    <a ui-sref="mui.admin.assetcategory" ng-click="ChangeAcive(12)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Asset Category</span>
                                     </a>
                                 </li>
                                 <li id="48" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.assetTypeFileExtension" onclick="ChangeAcive(12)">
+                                    <a ui-sref="mui.admin.assetTypeFileExtension" ng-click="ChangeAcive(12)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Asset Type</span>
                                     </a>
                                 </li>
                                 <li id="74" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.assetsnippet" onclick="ChangeAcive(12)">
+                                    <a ui-sref="mui.admin.assetsnippet" ng-click="ChangeAcive(12)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Asset Snippet</span>
                                     </a>
                                 </li>
                                 <li id="49" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.TemplateEngines" onclick="ChangeAcive(12)">
+                                    <a ui-sref="mui.admin.TemplateEngines" ng-click="ChangeAcive(12)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Template Engine</span>
                                     </a>
@@ -1015,13 +966,13 @@
                         <div class="accordion-inner">
                             <ul class="nav nav-list nav-list-bold" id="Ul4">
                                 <li id="50" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.dashboardwidget" onclick="ChangeAcive(8)">
+                                    <a ui-sref="mui.admin.dashboardwidget" ng-click="ChangeAcive(8)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Dashboard Widget</span>
                                     </a>
                                 </li>
                                 <li id="51" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.dashboardtemplate" onclick="ChangeAcive(8)">
+                                    <a ui-sref="mui.admin.dashboardtemplate" ng-click="ChangeAcive(8)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Dashboard Template</span>
                                     </a>
@@ -1041,37 +992,37 @@
                         <div class="accordion-inner">
                             <ul class="nav nav-list nav-list-bold" id="Ul6">
                                 <li id="55" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.taskflag" onclick="ChangeAcive(10)">
+                                    <a ui-sref="mui.admin.taskflag" ng-click="ChangeAcive(10)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Task Flag</span>
                                     </a>
                                 </li>
                                 <li id="1000" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.approvaltemplate" onclick="ChangeAcive(10)">
+                                    <a ui-sref="mui.admin.approvaltemplate" ng-click="ChangeAcive(10)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Approval Template</span>
                                     </a>
                                 </li>
                                 <li id="56" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.tasklistlibrary" onclick="ChangeAcive(10)">
+                                    <a ui-sref="mui.admin.tasklistlibrary" ng-click="ChangeAcive(10)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Task Library</span>
                                     </a>
                                 </li>
                                 <li id="57" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.tasktemplate" onclick="ChangeAcive(10)">
+                                    <a ui-sref="mui.admin.tasktemplate" ng-click="ChangeAcive(10)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Task Template</span>
                                     </a>
                                 </li>
                                 <li id="58" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.proofhqcredential" onclick="ChangeAcive(10)">
+                                    <a ui-sref="mui.admin.proofhqcredential" ng-click="ChangeAcive(10)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>ProofHQ</span>
                                     </a>
                                 </li>
                                 <li id="77" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.dalimcredential" onclick="ChangeAcive(10)">
+                                    <a ui-sref="mui.admin.dalimcredential" ng-click="ChangeAcive(10)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Dalim Credential</span>
 
@@ -1093,37 +1044,37 @@
                         <div class="accordion-inner">
                             <ul class="nav nav-list nav-list-bold" id="Ul7">
                                 <li id="60" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.credentialmanagement" onclick="ChangeAcive(11)">
+                                    <a ui-sref="mui.admin.credentialmanagement" ng-click="ChangeAcive(11)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Credential Management</span>
                                     </a>
                                 </li>
                                 <li id="61" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.reports" onclick="ChangeAcive(11)">
+                                    <a ui-sref="mui.admin.reports" ng-click="ChangeAcive(11)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Reports</span>
                                     </a>
                                 </li>
                                 <li id="62" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.customview" onclick="ChangeAcive(11)">
+                                    <a ui-sref="mui.admin.customview" ng-click="ChangeAcive(11)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Custom View</span>
                                     </a>
                                 </li>
                                 <li id="63" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.financialreportsettings" onclick="ChangeAcive(11)">
+                                    <a ui-sref="mui.admin.financialreportsettings" ng-click="ChangeAcive(11)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Financial report view</span>
                                     </a>
                                 </li>
                                 <li id="64" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.ganttviewreport" onclick="ChangeAcive(11)">
+                                    <a ui-sref="mui.admin.ganttviewreport" ng-click="ChangeAcive(11)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Gant view Report</span>
                                     </a>
                                 </li>
                                 <li id="65" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.customlist" onclick="ChangeAcive(11)">
+                                    <a ui-sref="mui.admin.customlist" ng-click="ChangeAcive(11)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Custom List</span>
                                     </a>
@@ -1144,25 +1095,25 @@
                         <div class="accordion-inner">
                             <ul class="nav nav-list nav-list-bold" id="Ul10">
                                 <li id="83" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.cmstemplate" onclick="ChangeAcive(11)">
+                                    <a ui-sref="mui.admin.cmstemplate" ng-click="ChangeAcive(11)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Html Snippets</span>
                                     </a>
                                 </li>
                                 <li id="84" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.cmscustomfontsettings" onclick="ChangeAcive(10)">
+                                    <a ui-sref="mui.admin.cmscustomfontsettings" ng-click="ChangeAcive(10)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Custom Font</span>
                                     </a>
                                 </li>
                                 <li id="85" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.cmscustomstylesettings" onclick="ChangeAcive(10)">
+                                    <a ui-sref="mui.admin.cmscustomstylesettings" ng-click="ChangeAcive(10)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Custom Style</span>
                                     </a>
                                 </li>
                                 <li id="86" ng-show="true" ui-sref-active="active">
-                                    <a ui-sref="mui.admin.cmstreestylesettings" onclick="ChangeAcive(10)">
+                                    <a ui-sref="mui.admin.cmstreestylesettings" ng-click="ChangeAcive(10)">
                                         <i class="icon-double-angle-right"></i>
                                         <span>Tree Style</span>
                                     </a>
@@ -1185,98 +1136,25 @@
                             <div ng-controller="mui.admin.broadcastmsgCtrl">
 
                                 <div class="span12">
-                                    <div class="box box-noborder">
-                                        <div class="box-header">
-                                            <h4 class="ng-binding">Role Settings</h4>
-                                        </div>
-                                        <div class="box-content">
-                                            <div class="box-content-margin">
-                                                <form name="AdminSettingform" class="form-horizontal ng-pristine ng-valid">
-                                                    <div class="row-fluid">
-                                                        <div class="span6">
-                                                            <div class="control-group ng-binding">
-                                                                <label class="control-label ng-binding" for="lblkey">Key</label><div class="controls">
-                                                                    <input type="text" class="ng-pristine ng-valid" ng-model="key" id="key" placeholder="key">
-                                                                </div>
-                                                            </div>
-                                                            <div class="control-group ng-binding">
-                                                                <label class="control-label ng-binding" for="lblIV">IV</label><div class="controls">
-                                                                    <input type="text" class="ng-pristine ng-valid" ng-model="IV" id="IV" placeholder="IV">
-                                                                </div>
-                                                            </div>
-                                                            <div class="control-group ng-binding">
-                                                                <label class="control-label ng-binding" for="lblAlgorithm">Algorithm</label><div class="controls">
-                                                                    <select class="chzn-select" name="Algorithm" id="Algorithm" ng-model="Algorithm">
-                                                                        <option>--Select--</option>
-                                                                        <option value="A">Option A</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="control-group ng-binding">
-                                                                <label class="control-label ng-binding" for="lblPaddingMode">Padding</label><div class="controls">
-                                                                    <select class="chzn-select" name="PaddingMode" id="PaddingMode" ng-model="PaddingMode">
-                                                                        <option>--Select--</option>
-                                                                        <option value="A">Option A</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="control-group ng-binding">
-                                                                <label class="control-label ng-binding" for="lblCipherMode">Cipher Mode</label><div class="controls">
-                                                                    <select class="chzn-select" name="CipherMode" id="CipherMode" ng-model="CipherMode">
-                                                                        <option>--Select--</option>
-                                                                        <option value="A">Option A</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="control-group ng-binding">
-                                                                <label class="control-label ng-binding widthauto" for="lblSSOTimeDifference">SSO Time</label><div class="controls">
-                                                                    <input type="text" class="ng-pristine ng-valid" ng-model="SSOTimeDifference" id="SSOTimeDifference" placeholder="SSOTimeDifference">
-                                                                </div>
-                                                            </div>
-                                                            <div class="control-group ng-binding">
-                                                                <label class="control-label ng-binding" for="lblSSOTokenMode">Token Mode</label><div class="controls">
-                                                                    <select class="chzn-select" id="sel8B5">
-                                                                        <option value="c153">Vini A</option>
-                                                                        <option value="c153">Vini AA</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="control-group ng-binding">
-                                                                <label class="control-label ng-binding" for="lblSSOTokenMode">User Group</label><div class="controls">
-                                                                    <select multiple="multiple" class="chzn-select" id="sel8B5">
-                                                                        <option value="c153">Vini A</option>
-                                                                        <option value="c153">Vini AA</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="control-group ng-binding">
-                                                                <label class="control-label ng-binding" for="lblSSOTokenMode">SSO global access</label><div class="controls">
-                                                                    <select class="chzn-select" multiple="multiple" allowclear="true" id="ddlglobalAccess" name="globalAccess" ng-model="globalaccess">
-                                                                        <option>--Select--</option>
-                                                                        <option value="A">Option A</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="control-group ng-binding">
-                                                                <label class="control-label ng-binding" for="ClientIntranetUrl">Intranet URL</label><div class="controls">
-                                                                    <input type="text" class="ng-pristine ng-valid" ng-model="ClientIntranetUrl" id="ClientIntranetUrl" placeholder="Client Intranet Url">
-                                                                </div>
-                                                            </div>
+                                    <div class="AdminMargin">
+                                        <div class="box box-noborder">
+                                            <div class="box-header">
+                                                <h4>Broadcast Message </h4>
+                                            </div>
+                                            <div class="box-content">
+                                                <div class="box-content-margin">
+                                                    <form class="form-horizontal">
+                                                        <div class="broadcast">
                                                             <div class="control-group">
-                                                                <label class="control-label">SAML Roles</label><div class="controls">
-                                                                    <select class="chzn-select" id="sel8B5">
-                                                                        <option value="c153">Vini A</option>
-                                                                        <option value="c153">Vini AA</option>
-                                                                    </select>
-                                                                </div>
+                                                                <label class="control-label" for="messages">Message Title</label>
+                                                                <div class="controls"><textarea class="broadcast-textarea" ng-model="broadcastmsg" id="broadcastmsg" rows="3" placeholder="Broadcast Messages"></textarea>
+                                                                <span class="sndMsgButton"><button ng-click="addBroadcastMessage()" ng-model="buttonText" class="btn btn-small btn-primary">Add</button></span></div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </form>
+                                                        <div class="gridStyle" ng-grid="gridOptions"></div>
+                                                    </form>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="box-footer align-right">
-                                            <button class="btn btn-small btn-primary" ng-model="Update" onclick="UpdateSSoSettings()" type="submit">Update</button>
                                         </div>
                                     </div>
                                 </div>
